@@ -1,0 +1,43 @@
+Question: Please briefly describe the application(s) your team is building or plans to build with Flink.
+
+• Semantic big data integration
+• Stream Processing applications for manufacturing
+• Dynamic graph database, maintaining connected components in the face of inserts and deletions of edges, plus some additional pregel-style operators on top.
+• ETL apps
+• Product changes feed into google shopping, web analytics
+• Content Analysis Platform for ingesting & feature extraction of various types of content. Using ML models, content extraction, NLP etc others.
+• Time series analysis for anomaly detection and advanced data pipelines
+• Various applications for processing logs and scaling data science algorithms.
+• Real-time predictions mixing streaming and historical data
+• An alerting system that allows for dynamic rules. This solution must allow users to create new rules or change the existing ones to be then matched against incoming events. If there is a mach a new event will be generated as an alert to be inspected by the Analytics team. The changes to the rules must take effect without losing availability or events.
+• 1) Real time graph label propagation to identify players in the network. 2) RBea (you have probably heard). 3) "Smaller" real-time jobs that do aggregations/keep state
+• GeoMultiSens an assembly of code to align, analyze and visualize large amounts (from tens of terabyte onward) of remote sensing data in python
+• IoT-related
+• We use flink in our monitoring infrastructure
+• A time series data cache: use Flink to cache time series data until we have a complete "block" that can be sent to live in a permanent key - value store
+• Data pipeline for a large media org
+• Streaming log analytics, click stream processing, ETL jobs
+• Parallel workflow processing, distributed ML
+• Streaming Business Analytics
+• IOT QOS, e-commerce
+• A DataStream job dealing with stock data: do some statistics in a window and record by-record
+• Anomaly detection engine on live events
+• Processing of large datasets of geospatial data
+• Real-time data board, fraud detection system, website monitoring system, etc. Most of them are powered by Apache Storm now.
+• Near-real-time stream-based crawler
+• Frequent Itemset Mining
+• SaaS platform for customers to design and run stream processing / analytics on learning / education data
+• Stream and batch processing of infrastructure and business events.
+• Data Ingest, Transform, and Detection
+• Streaming machine learning pipelines
+• We use the DataSet API for exploring network data with the K-clique algorithm.
+• Recommendations
+• Predictive models for streams of data
+• Currently exploring Flink for easing the development, deployment and monitoring of distributed financial calculators. This would heavily rely on the DataStream API, with peculiarities like: - many small streams must be joined by financial instrument;  - streams include realtime market data, historical data, and a control stream that reflects what calculators end-user want;  - The calculation would made by our financial calculation library, which is a native lib -- JNI requires.
+• Real-time data analysis
+• Analytics
+• We've built a platform that allows our data scientists to create and run Flink jobs and without having to worry about infrastructure or operations or management.
+• URL content feature extraction, analysis
+• Backend for analytics
+• Real-time Decisioning Engines for Customer Experience Data
+• Simple streaming applications to transport data from kafka to different data sinks (hdfs, elasticsearch); complex batch applications (50 and more operators)

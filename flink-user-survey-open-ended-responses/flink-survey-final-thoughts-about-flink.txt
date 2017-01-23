@@ -1,0 +1,19 @@
+Question: We welcome any final comments about any aspect of Flink.
+
+• You're doing a great job but now it's time to make another step ahead (in terms of number of Flink developers and support/responsiveness, from consultancy to pull requests/ticketing-housekeeping) because the community is becoming larger and larger.
+• Great work!
+• I like the overall concepts a lot, especially around state management and checkpointing. I like the actual API in Scala a little less, and the implementation behind it even less (for my particular use case), but I have high hopes the latter two parts will get better over time.
+• Don't forget that Flink's still a very good batch processor ;)
+• Keep up the great work!
+• Keep up the good work
+• I'm looking forward to Flink Forward 2017!
+• More demo and training materials please!
+• I am pretty excited about the power and simplicity of Apache Flink. It allows to get cases up and running with only a few operations tasks.
+• By far the best community. I hope I don't skew the results with my wishlist ;)
+• Keep up the great work
+• Love the vibrance and excitement of the Flink community.
+• Keep up the great work. We're planning on migrating to Beam + FlinkRunner in the near term.
+• Great work! Really enjoyed using Flink
+• I'm thrilled to be using Flink and excited about its future.
+• I am looking forward to continue to work with Apache Flink.  I am hoping that the major hadoop distributions (Hortonworks / Cloudera) will add official support in their product offerings.  I am looking forward to additional Flink momentum in the USA.
+• What I like most about Flink is that it makes it very easy to solve different kinds of problems in such a simple and intuitive way.

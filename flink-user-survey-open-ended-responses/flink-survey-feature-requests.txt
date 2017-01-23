@@ -1,0 +1,66 @@
+Question: What new features or functionality would you like to see in Flink?
+
+• From a non-technical point of view: review all currently open tickets and pull requests (and be more responsive with community), Flink training and certification system. From a technical point of view: unify streaming and batch connectors; cache dataset in memory and interactive analysis on them; invest in machine learning; integration with Apache Arrow; Cloudera installer and integration
+• Run distributed jobs without a master. So you can deploy to an auto-scaling fleet (like Kubernetes) based on current load.
+• SQLStream, Metrics, Location grouping of operators
+• Dynamic load balancing & window processing
+• Connector with Neo4j and HBase
+• Caching
+• Official Docker support to ease deployments, better support for S3 as a data source and destination without hdfs (not using S3A)
+• Queryable state exposed as JDBC
+• 1. High level API for queryable state, 2. Ability to share slots between *small* processes
+• CEP / rules using Drools.
+• The ability to manage large (>1TB) of state is most important to me. I think incremental checkpointing and recovery would make this feasible. Further future: "dynamic algorithm" abstraction layer over flink streaming, i.e. https://en.wikipedia.org/wiki/Dynamic_problem_(algorithms) . If I have a stream of inserts/updates/deletes, give me a "table" of values, let me calculate aggregates or transformations, then give me the changelog of operations as an output DataStream. Especially interested in dynamic versions of graph algorithms like connected components, where the input is a changelog of edges and the output is a changelog of vertex -> component id.
+• DataSet and DataStream usage together. Split functionality in dataset.
+• Dynamic scaling on YARN, exactly-once Kafka output
+• Support for changing parallelism of running topology; additional checkpointing metrics; more ML algorithms in Flink ML
+• Full support for Mesos (in general, we would like to see a more flexible scheduling framework); generic mechanism to serialize data from job manager to task manager; support for case classes (Scala) in keyBy stream partitioning; built-in unit testing framework; dynamic auto-scaling based on workload criteria; upgrades to jobs with no downtime (rolling or red-blue)
+• 1. Side inputs, 2. Global unkeyed state, 3. Ordering in data streams
+• Make the UI more helpful for debugging: visualizing or exposing watermarks, or highlighting slow watermarks per task, highlighting tasks that have large checkpoint sizes, highlighting tasks that have slow checkpoint times; when showing things broken down by the node the task runs on, show the hostname; optional: provide a link to the environment that is running the task manager, simplify collecting logs for the job manager and all task managers
+• DataStream and DataSet unified computing; evolving DataStream processing; side inputs
+• Incremental checkpoints & automatic savepoints
+• Not only incremental checkpointing but also incremental restore; API to query state
+• Diff snapshotting
+• Streaming SQL
+• Streaming and batch APIs should be merged together
+• Dynamic scaling; Mesos support; Cassandra state backend; also more user-friendly support for Scala API.
+• Improved support for iterations.
+• Easy to setup and maintain Apache Flink (like plug and play)
+• More examples! Word count is great, but some more complex examples, especially involving queryable state and the complex event processor that reflect real world use cases would be nice. I am working on one now for queryable state, but am struggling.
+• Better ML Support
+• More real-world integrations and use cases including specific demos and code that I can reference.
+• In-depth monitoring features; professional service/support
+• A bit more emphasis on machine learning algorithms
+• SQL API, live state querying
+• StreamSQL
+• Side inputs; improved iteration support for streaming; deterministic sampling; static vs. dynamic path in iterations (FLINK-2396)
+• Reading multiple Avro files in a DataSet source
+• Ability to stop (not cancel) a job, let all the pending work finish, take a savepoint and end the job. This will allow for smoother job version upgrades, without any data being processed twice. Dynamic scaling of the entire topology and changes to the parallelism of specific operators. Option to keep a stream as keyed after an operator, so one can chain several operators with keyed state after a single keyBy().
+• Individual JVM for each topology
+• More enhanced query and log separation per job
+• Support of more data formats as keys and for aggregations; improvement of documentation i.e. indexing and self-defined aggregation functions
+• Excited for the upcoming Mesos integration. It would be nice if the jobmanager exposed an http API for programmatically deploying / managing jobs.
+• Easier way to spot serialization errors and flink not able to deduce the type of an expression before I try to run the job; better support for incremental windows (window of 1 hour, emit partial result every minute).        Improved support of csv input parsing, options to handle missing values, custom mappers to handle bad data to good values, custom parsers etc.
+• More ML algorithms implemented.
+• Window supporting several evictors; listen to evicted event streams.
+• More machine learning algorithms
+• Save and then scale out; break the topology constraint.
+• More machine learning algorithms
+• Better serialization of Scala classes
+• Operator recovery (optional); ability to have the local state restored on checkpoint recovery and or node migration.
+• Support to run on Mesos
+• Make it easier to write tests; add documentation about how to write tests.
+• I'd like to see a library or API that does what the "yarn_session.sh" and "flink" commands do so I can programatically create and manage Flink clusters and jobs.
+• Elasticity of running topology without restart. Let's say we have 2 taskmanagera with 8 slots each, so topology can have max parallelism of 16. Due to high load we should be able to one more taskmanager and flink should be able to increase parallelism automatically. I do not have to restart topology.
+• WebUI feature to have savepoint and recover from that savepoint.
+• Side inputs; full SQL / Calcite support on streams, full DataStream + data table mix, keyed local state available across task boundaries
+• Exactly-once support for Kafka sink
+• Training/certification ecosystem is missing
+• Documentation and best practices
+• The WebUI is very nice, miles ahead of Spark. The Gelly graph API connected components implementation only works if your dataset fits into RAM :(
+• A sandbox environment with easy to follow coded that even 1st timer for Flink can learn and gain a deep knowledge on Flink. - i.e.) Hortonworks sandbox
+• Task memory breakup/job
+• Offers for training
+• FlinkML
+• Quick recovery
+• Programatic creation and management of Flink jobs.

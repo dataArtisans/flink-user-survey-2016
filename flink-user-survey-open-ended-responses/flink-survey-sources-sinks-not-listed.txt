@@ -1,0 +1,48 @@
+What other sources / sinks not included in the list above, if any, are important for your Flink application?
+
+Note: each bullet point represents a unique response. We didn't de-duplicate so that it's possible to see how frequently a response appears. 
+
+• HBase, Hive
+• Neo4j, HBase
+• Druid
+• HBase
+• Hive
+• HBase
+• REST Output, Couchbase, FS (CSV Output)
+• Hive
+• Elasticsearch
+• XtreemFS through our own python output formats
+• Elasticsearch
+• Tranquility (Druid)
+• Alluxio via HDFS connector
+• Elasticsearch
+• MySQL, Postgres
+• Riak KV / Riak TS
+• MySQL
+• Oracle database
+• Local files
+• RabbitMQ
+• Cassandra
+• Elasticsearch
+• MapRFS
+• Elasticsearch, HBase
+• Internal, Kafka-based streaming sink
+• Apache NiFi, Elasticsearch, HTTP/S
+• Elasticsearch, MySQL
+• Elasticsearch, MySQL
+• HBase, Hive
+• Neo4j, HBase, Elasticsearch
+• Apache Druid
+• HBase for timeseries handling
+• JMS
+• Reading a DataStream< T> from Hadoop SequenceFiles (instead of line-delimited text) with polling for updates, which seems strangely missing from the current supported inputs.
+• HBase
+• Elasticsearch
+• Hive
+• We write our own sources and sinks on our enterprise's wrapper around Kafka
+• Elasticsearch
+• RDBMS (eg EXASOL)
+• RDBMS (e.g. MySQL)
+• Kudu
+• Cassandra and Elasticsearch as sink
+• JDBC

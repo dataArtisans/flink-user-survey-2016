@@ -1,0 +1,25 @@
+Question: Are there any other challenges (with Flink) not listed above that you'd like to mention?
+
+• Centralized error management and job scheduling/monitoring/collect data from an external program
+• Performance. It seams like operations like group by and sort could be significantly faster. For example with Supersonic in C++ you can groupby 10 columns in 1/10 of the time in takes in flink.
+• Deployment of cluster for development and daily jobs
+• Get all the logs from all the TM in one place (job by job, not all at once as in YARN).
+• Learning it. But I think the tech notes (of DataArtisan blog) and manual is OK.
+• The Scala API for streaming feels very raw in comparison with e.g. the Spark scala API. The same basic operations in Flink have awkward caveats, or sometimes are only implemented in the Java API. Kryo 2 in the serialization layer is old, and unfortunately hard to work around if you're depending on a different version.
+• Kerberos Security with long running applications on YARN
+• Integration with zookeeper is cumbersome - more seamless mechanism or other alternatives such as etcd etc.
+• Creating custom operators, triggers, etc. It would be nice to have more detailed documentation on custom triggers, evictors, and internals of windowing.
+• Dynamically applying rules to incoming events represents a complex challenge. There is already a solution proposed by the video game company King. The problem with King's solution is that we lose some flexibility and we need to use an external scripting language to dynamically execute the rule conditions instead of using Flink's constructs.
+• Minor kinks in the flink python api
+• FLIP-12
+• Offer flink as REST API for maintenance
+• Custom class would raise exception in topology writing in Scala, but not in Java
+• Broadcasting
+• I end up with many jobs doing simple things, I don't know if it's possible, but a way to deploy more than one job per task when I'm doing really simple counters, histograms on streams. Particularly, I have a problem with a bug in kryo, and the kryo version on flink is too old and since it's used for snapshotting, it's hard to upgrade to a newer release (kryo is two major versions ahead of the one used by Flink), there should be a plan to auto upgrade snapshots otherwise Flink will get stuck with an old version of kryo (this may happen with other dependencies).
+• High availability of master node
+• Steam source from database
+• Dynamic scaling
+• More organized documentation
+• I feel Flink deployment (non-Docker based) can be made better especially in cloud-based environments.
+• A good unit testing framework
+• More commercial-strength examples for large scale deployment, operationalizing, monitoring, etc.
